@@ -1,5 +1,5 @@
 # DateTimeProviding.Abstractions
 
-IDateTimeProvider abstractions
-Commonly used types:
+IDateTimeProvider abstractions  
+Commonly used types:  
 DateTimeProviding.Abstractions.IDateTimeProvider
