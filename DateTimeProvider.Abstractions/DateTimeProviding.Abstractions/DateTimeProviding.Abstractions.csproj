@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Library to help abstracting time in dotnet projects, usually for testing purpose</Description>
+    <VersionPrefix>1.0.0-beta</VersionPrefix>
+    <Authors>Vivien FABING</Authors>
+    <PackageProjectUrl>https://github.com/vfabing/DateTimeProviding.Abstractions</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
