@@ -1,5 +1,5 @@
 # DateTimeProviding.Abstractions
+Library to help abstracting time in dotnet projects, usually for testing purpose.
 
-IDateTimeProvider abstractions  
 Commonly used types:  
 DateTimeProviding.Abstractions.IDateTimeProvider
