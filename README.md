@@ -1,7 +1,18 @@
-[![NuGet Version](https://img.shields.io/nuget/v/DateTimeProviding.Abstractions.svg)](https://www.nuget.org/packages/DateTimeProviding.Abstractions)
+[![NuGet Version](https://img.shields.io/nuget/v/Chronos.Net.svg)](https://www.nuget.org/packages/Chronos.Net/)
 
-# DateTimeProviding.Abstractions
-Library to help abstracting time in dotnet projects, usually for testing purpose.
+# Chronos.Net
+Simple library to help abstracting time in dotnet projects, usually for testing purpose.
 
-Commonly used types:  
-DateTimeProviding.Abstractions.IDateTimeProvider
+## Chronos.Abstractions
+Contains:
+- An `IDateTimeProvider` interface
+
+## Chronos.Net
+Contains:
+- An `IDateTimeProvider` interface simple implementation named `DateTimeProvider`
+
+## Chronos.AspNetCore
+Contains:
+- A `WebHostBuilder` extension to enable to provide the default implementation `DateTimeProvider` for the `IDateTimeProvider` interface, by using `UseDateTimeProvider()`  
+
+A sample web project can be found in the [samples folder](https://github.com/vfabing/Chronos.Net/tree/master/samples/SimpleWebSample)
