@@ -21,8 +21,8 @@ steps:
 - script: |
     dotnet restore Chronos.Net.sln
     dotnet build Chronos.Net.sln --configuration $(buildConfiguration) /p:VersionPrefix=$(major).$(minor).$(patch)
-    dotnet test Chronos.Net.sln --no-build --logger:trx
-    dotnet pack Chronos.Net.sln --no-build /p:PackageVersion=$(major).$(minor).$(patch) -o $(build.artifactstagingdirectory)
+    dotnet test Chronos.Net.sln --no-build --configuration $(buildConfiguration) --logger:trx
+    dotnet pack Chronos.Net.sln --no-build --configuration $(buildConfiguration) /p:PackageVersion=$(major).$(minor).$(patch) -o $(build.artifactstagingdirectory)
 
 - task: PublishTestResults@2
   inputs:
