@@ -11,7 +11,21 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  major: 1
+  minor: 0
+  patch: $(rev:r)
+
+name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor).$(patch)
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- script:
+    dotnet build Chronos.Net.sln --configuration $(buildConfiguration) /p:VersionPrefix=$(major).$(minor).$(patch)
+    dotnet test Chronos.Net.sln --no-build --logger:trx
+    dotnet pack Chronos.Net.sln --no-build /p:PackageVersion=$(major).$(minor).$(patch) -o $(build.artifactstagingdirectory)
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TestResults/*.trx'
+
+- task: PublishBuildArtifacts@1
