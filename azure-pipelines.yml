@@ -18,7 +18,7 @@ variables:
 name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor)$(patch)
 
 steps:
-- script:
+- script: |
     dotnet build Chronos.Net.sln --configuration $(buildConfiguration) /p:VersionPrefix=$(major).$(minor).$(patch)
     dotnet test Chronos.Net.sln --no-build --logger:trx
     dotnet pack Chronos.Net.sln --no-build /p:PackageVersion=$(major).$(minor).$(patch) -o $(build.artifactstagingdirectory)
