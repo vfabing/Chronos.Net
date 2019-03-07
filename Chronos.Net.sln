@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C7A90449-B9E9-4459-9CDE-90C59D9AB7C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6CD45CFC-59EF-42ED-B2CA-7E2F3791E176}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.Abstractions", "src\Chronos.Abstractions\Chronos.Abstractions.csproj", "{3D8099F2-0BD6-460D-9CAD-6BCA998754D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.Net", "src\Chronos.Net\Chronos.Net.csproj", "{B5C863C8-D06E-4885-9C12-1EB2196677EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.AspNetCore", "src\Chronos.AspNetCore\Chronos.AspNetCore.csproj", "{33BB980B-A9A1-4499-90CF-54E2E82927DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.Abstractions.UnitTests", "tests\Chronos.Abstractions.UnitTests\Chronos.Abstractions.UnitTests.csproj", "{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D8099F2-0BD6-460D-9CAD-6BCA998754D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8099F2-0BD6-460D-9CAD-6BCA998754D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8099F2-0BD6-460D-9CAD-6BCA998754D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8099F2-0BD6-460D-9CAD-6BCA998754D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C863C8-D06E-4885-9C12-1EB2196677EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C863C8-D06E-4885-9C12-1EB2196677EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C863C8-D06E-4885-9C12-1EB2196677EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C863C8-D06E-4885-9C12-1EB2196677EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BB980B-A9A1-4499-90CF-54E2E82927DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BB980B-A9A1-4499-90CF-54E2E82927DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BB980B-A9A1-4499-90CF-54E2E82927DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BB980B-A9A1-4499-90CF-54E2E82927DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D8099F2-0BD6-460D-9CAD-6BCA998754D3} = {6CD45CFC-59EF-42ED-B2CA-7E2F3791E176}
+		{B5C863C8-D06E-4885-9C12-1EB2196677EA} = {6CD45CFC-59EF-42ED-B2CA-7E2F3791E176}
+		{33BB980B-A9A1-4499-90CF-54E2E82927DE} = {6CD45CFC-59EF-42ED-B2CA-7E2F3791E176}
+		{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4} = {C7A90449-B9E9-4459-9CDE-90C59D9AB7C8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6ED162A-2C86-4997-9180-32DC17778DDD}
+	EndGlobalSection
+EndGlobal

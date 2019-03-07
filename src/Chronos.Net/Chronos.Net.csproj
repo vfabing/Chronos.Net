@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Simple implementation of DateTimeProvider for .Net projects</Description>
+    <VersionPrefix>1.0.2</VersionPrefix>
+    <Authors>Vivien FABING</Authors>
+    <PackageProjectUrl>https://github.com/vfabing/Chronos.Net</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chronos.Abstractions\Chronos.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
