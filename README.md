@@ -17,14 +17,14 @@ Contains:
 [![Chronos.Net package in Vivien_NuGet feed in Azure Artifacts](https://vivien.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c65668a1-d42d-4549-8bba-74d16d3af39e/Packages/2f9eae02-0cdd-46a3-a8c4-8e8f21cd6d92/Badge)](https://vivien.visualstudio.com/Chronos.Net/_packaging?_a=package&feed=c65668a1-d42d-4549-8bba-74d16d3af39e&package=2f9eae02-0cdd-46a3-a8c4-8e8f21cd6d92&preferRelease=true)
 
 Contains:
-- A simple implementation named `DateTimeProvider` of the `IDateTimeProvider` interface.
+- A simple implementation `DateTimeProvider` of the `IDateTimeProvider` interface.
 
 ## Chronos.AspNetCore
 [![NuGet Version](https://img.shields.io/nuget/v/Chronos.AspNetCore.svg)](https://www.nuget.org/packages/Chronos.AspNetCore/)
 [![Chronos.AspNetCore package in Vivien_NuGet feed in Azure Artifacts](https://vivien.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c65668a1-d42d-4549-8bba-74d16d3af39e/Packages/17a4a36e-bc01-48ca-98ac-ceb9d1c55e1f/Badge)](https://vivien.visualstudio.com/Chronos.Net/_packaging?_a=package&feed=c65668a1-d42d-4549-8bba-74d16d3af39e&package=17a4a36e-bc01-48ca-98ac-ceb9d1c55e1f&preferRelease=true)
 
 Contains:
-- A `WebHostBuilder` extension to enable to provide the default implementation `DateTimeProvider` for the `IDateTimeProvider` interface, by simply using `UseDateTimeProvider()`  
+- A `WebHostBuilder` extension to provide the default implementation `DateTimeProvider` for the `IDateTimeProvider` interface, by simply using `UseDateTimeProvider()`  
 
 ```csharp
 public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
