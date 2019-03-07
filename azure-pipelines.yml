@@ -13,9 +13,9 @@ variables:
   buildConfiguration: 'Release'
   major: 1
   minor: 0
-  patch: $(rev:r)
+  patch: $(rev:.r)
 
-name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor).$(patch)
+name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor)$(patch)
 
 steps:
 - script:
