@@ -15,7 +15,7 @@ variables:
   minor: 0
   patch: $[counter('patch', 0)]
 
-name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor)$(patch)
+name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor).$(patch)
 
 steps:
 - script: |
