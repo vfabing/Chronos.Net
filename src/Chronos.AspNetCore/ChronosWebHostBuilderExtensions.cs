@@ -1,5 +1,5 @@
 ﻿using Chronos.Abstractions;
-using Chronos.Net;
+using Chronos;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;

@@ -1,7 +1,7 @@
 ﻿using Chronos.Abstractions;
 using System;
 
-namespace Chronos.Net
+namespace Chronos
 {
     public class DateTimeProvider : IDateTimeProvider
     {
