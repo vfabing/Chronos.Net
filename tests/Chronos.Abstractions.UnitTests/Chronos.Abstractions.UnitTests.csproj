@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Chronos.Abstractions\Chronos.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\Chronos.Abstractions\Chronos.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
