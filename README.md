@@ -15,4 +15,11 @@ Contains:
 Contains:
 - A `WebHostBuilder` extension to enable to provide the default implementation `DateTimeProvider` for the `IDateTimeProvider` interface, by using `UseDateTimeProvider()`  
 
+```csharp
+public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+    WebHost.CreateDefaultBuilder(args)
+    .UseDateTimeProvider()
+    .UseStartup<Startup>();
+```
+
 A sample web project can be found in the [samples folder](https://github.com/vfabing/Chronos.Net/tree/master/samples/SimpleWebSample)
