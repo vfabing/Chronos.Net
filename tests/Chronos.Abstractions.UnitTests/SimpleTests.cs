@@ -5,10 +5,10 @@ using Xunit;
 
 namespace Chronos.UnitTests
 {
-    public class SimpleTests
+    public class IDateTimeProviderTests
     {
         [Fact]
-        public void IDateTimeProvider_ShouldBeFakeable()
+        public void UtcNow_ShouldBeFakeable()
         {
             // Arrange
             var dateTimeProvider = A.Fake<IDateTimeProvider>();
@@ -18,6 +18,19 @@ namespace Chronos.UnitTests
 
             // Assert
             Assert.Equal(new DateTime(4242, 7, 7, 13, 37, 7), dateTimeProvider.UtcNow);
+        }
+
+        [Fact]
+        public void Now_ShouldBeFakeable()
+        {
+            // Arrange
+            var dateTimeProvider = A.Fake<IDateTimeProvider>();
+
+            // Act
+            A.CallTo(() => dateTimeProvider.Now).Returns(new DateTime(4242, 7, 7, 13, 37, 7));
+
+            // Assert
+            Assert.Equal(new DateTime(4242, 7, 7, 13, 37, 7), dateTimeProvider.Now);
         }
     }
 }
