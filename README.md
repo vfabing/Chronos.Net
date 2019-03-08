@@ -10,7 +10,7 @@ Simple library to help abstracting time in dotnet projects, usually for testing 
 [![Chronos.Abstractions package in Vivien_NuGet feed in Azure Artifacts](https://vivien.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c65668a1-d42d-4549-8bba-74d16d3af39e/Packages/ea8d171a-34a0-4e2c-a1ab-de0d30c9a1b1/Badge)](https://vivien.visualstudio.com/Chronos.Net/_packaging?_a=package&feed=c65668a1-d42d-4549-8bba-74d16d3af39e&package=ea8d171a-34a0-4e2c-a1ab-de0d30c9a1b1&preferRelease=true)
 
 Contains:
-- An `IDateTimeProvider` interface.
+- An `IDateTimeProvider` interface which exposes `Now` or `UtcNow` properties.
 
 ## Chronos.Net
 [![NuGet Version](https://img.shields.io/nuget/v/Chronos.Net.svg)](https://www.nuget.org/packages/Chronos.Net/)
@@ -31,6 +31,14 @@ public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
     WebHost.CreateDefaultBuilder(args)
     .UseDateTimeProvider()
     .UseStartup<Startup>();
+```
+
+Then instead of using `DateTime.Now` or `DateTime.UtcNow`, you should use `IDateTimeProvider.Now` or `IDateTimeProvider.UtcNow`, which would enable you to fake/mock the time in your tests.  
+Example with [FakeItEasy](https://fakeiteasy.github.io/):
+
+```csharp
+var dateTimeProvider = A.Fake<IDateTimeProvider>();
+A.CallTo(() => dateTimeProvider.Now).Returns(new DateTime(2019, 3, 6, 9, 0, 0));
 ```
 
 A sample web project can be found in the [samples folder](https://github.com/vfabing/Chronos.Net/tree/master/samples/SimpleWebSample)
