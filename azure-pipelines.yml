@@ -18,6 +18,14 @@ variables:
 name: $(date:MMdd)-$(BuildDefinitionName)-$(major).$(minor).$(patch)
 
 steps:
+- task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
+  displayName: 'Prepare analysis on SonarCloud'
+  inputs:
+    SonarCloud: SonarCloud
+    organization: 'vfabing-github'
+    projectKey: chronos.net
+    projectName: 'Chronos.Net '
+
 - script: |
     dotnet restore Chronos.Net.sln
     dotnet build Chronos.Net.sln --configuration $(buildConfiguration) /p:VersionPrefix=$(major).$(minor).$(patch)
@@ -28,5 +36,8 @@ steps:
   inputs:
     testResultsFormat: 'VSTest'
     testResultsFiles: '**/TestResults/*.trx'
+
+- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+  displayName: 'Run Code Analysis'
 
 - task: PublishBuildArtifacts@1
