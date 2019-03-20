@@ -1,6 +1,6 @@
 [![NuGet Version](https://img.shields.io/nuget/v/Chronos.Net.svg)](https://www.nuget.org/packages/Chronos.Net/)
 [![Build Status](https://vivien.visualstudio.com/Chronos.Net/_apis/build/status/Chronos.Net?branchName=master)](https://vivien.visualstudio.com/Chronos.Net/_build/latest?definitionId=43&branchName=master)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chronos.net&metric=alert_status)](https://sonarcloud.io/dashboard?id=chronos.net)
     
 # Chronos.Net
 Simple library to help abstracting time in dotnet projects, usually for testing purpose.
