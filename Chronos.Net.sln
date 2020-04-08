@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C7A90449-B9E9-4459-9CDE-90C59D9AB7C8}"
 EndProject
@@ -14,6 +14,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.AspNetCore", "src\Chronos.AspNetCore\Chronos.AspNetCore.csproj", "{33BB980B-A9A1-4499-90CF-54E2E82927DE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chronos.Abstractions.UnitTests", "tests\Chronos.Abstractions.UnitTests\Chronos.Abstractions.UnitTests.csproj", "{85A85E51-FF9D-4BA9-BDF8-F51DCE6986E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C37D02C-606D-4CA6-A4D5-CF0B9B36DDF9}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

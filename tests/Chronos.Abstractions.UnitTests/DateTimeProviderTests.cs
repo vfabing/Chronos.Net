@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Chronos.UnitTests
 {
-    public class IDateTimeProviderTests
+    public class DateTimeProviderTests
     {
         [Fact]
         public void UtcNow_ShouldBeFakeable()

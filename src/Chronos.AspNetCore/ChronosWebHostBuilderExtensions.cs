@@ -1,10 +1,9 @@
 ﻿using Chronos.Abstractions;
-using Chronos;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Chronos
+namespace Chronos.AspNetCore
 {
     public static class ChronosWebHostBuilderExtensions
     {
@@ -12,7 +11,15 @@ namespace Chronos
         {
             if (builder == null) throw new ArgumentNullException(nameof(builder));
             builder.ConfigureServices(collection =>
-                collection.AddSingleton<IDateTimeProvider>(new DateTimeProvider()));
+                collection.AddSingleton<IDateTimeProvider, DateTimeProvider>());
+            return builder;
+        }
+
+        public static IWebHostBuilder UseDateTimeOffsetProvider(this IWebHostBuilder builder)
+        {
+            if (builder == null) throw new ArgumentNullException(nameof(builder));
+            builder.ConfigureServices(collection =>
+                collection.AddSingleton<IDateTimeOffsetProvider, DateTimeOffsetProvider>());
             return builder;
         }
     }
