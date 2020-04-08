@@ -1,5 +1,4 @@
-﻿using Chronos;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace SimpleWebSample
@@ -13,7 +12,6 @@ namespace SimpleWebSample
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseDateTimeProvider()
                 .UseStartup<Startup>();
     }
 }
