@@ -52,6 +52,7 @@ public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
     .UseStartup<Startup>();
 ```
 
+## Usage
 Then instead of using `DateTime.Now`, `DateTime.UtcNow`, `DateTimeOffset.Now` or `DateTimeOffset.UtcNow`, you should use `IDateTimeProvider.Now`, `IDateTimeProvider.UtcNow`, `IDateTimeOffsetProvider.Now` or `IDateTimeOffsetProvider.UtcNow` which would enable you to fake/mock the time in your tests.  
 Example with [FakeItEasy](https://fakeiteasy.github.io/):
 
